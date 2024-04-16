@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "TestTextBlockBinding.Browser": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5011;http://localhost:5010",
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/debug?browser={browserInspectUri}"
+    }
+  }
+}
