@@ -12,23 +12,22 @@ namespace TestTextBlockBinding.Views;
 public partial class MainView : UserControl
 {
 
-  private MainViewModel vm = new ();
+  private MainViewModel? vm => DataContext as MainViewModel;
 
   public MainView ()
   {
     InitializeComponent ();
-
-    DataContext = vm;
-    ByCode.Text = vm.Counter.ToString ();
+    
+    ByCode.Text = vm?.Counter.ToString ();
   }
 
 
 
   private void Button_OnClick (Object? sender, RoutedEventArgs e)
   {
-    vm.Counter += 1;
+    if (vm != null) vm.Counter += 1;
 
-    ByCode.Text = vm.Counter.ToString ();
+    ByCode.Text = vm?.Counter.ToString ();
   }
 
 }
