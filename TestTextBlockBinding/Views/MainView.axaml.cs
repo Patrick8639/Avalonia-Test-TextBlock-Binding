@@ -12,7 +12,7 @@ namespace TestTextBlockBinding.Views;
 public partial class MainView : UserControl
 {
 
-  private MainViewModel? vm => DataContext as MainViewModel;
+  private MainViewModel vm = new ("I was created in MainView-code behind");
 
   public MainView ()
   {
